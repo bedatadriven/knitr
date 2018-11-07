@@ -19,10 +19,10 @@ shot_counter = knit_counter(1L)
 chunk_counter = knit_counter(1L)
 
 # a vectorized and better version than evaluate:::line_prompt
-line_prompt = function(x, prompt = getOption('prompt'), continue = getOption('continue')) {
-  # match a \n, then followed by any character (use zero width assertion)
-  paste0(prompt, gsub('(?<=\n)(?=.|\n)', continue, x, perl = TRUE))
-}
+#  line_prompt = function(x, prompt = getOption('prompt'), continue = getOption('continue')) {
+#   # match a \n, then followed by any character (use zero width assertion)
+#   paste0(prompt, gsub('(?<=\n)(?=.|\n)', continue, x, perl = TRUE))
+# }
 
 # add a prefix to output
 comment_out = function(x, prefix = '##', which = TRUE, newline = TRUE) {
@@ -31,7 +31,7 @@ comment_out = function(x, prefix = '##', which = TRUE, newline = TRUE) {
   if (is.null(prefix) || !nzchar(prefix) || is.na(prefix)) return(x)
   prefix = paste(prefix, '')
   x = gsub(' +([\n]*)$', '\\1', x)
-  x[which] = line_prompt(x[which], prompt = prefix, continue = prefix)
+  x[which] = evaluate:::line_prompt(x[which], prompt = prefix, continue = prefix)
   x
 }
 
@@ -509,7 +509,7 @@ knit_global = function() {
 indent_block = function(block, spaces = '    ') {
   if (is.null(block) || !any(nzchar(block))) return(rep(spaces, length(block)))
   if (spaces == '') return(block)
-  line_prompt(block, spaces, spaces)
+  evaluate:::line_prompt(block, spaces, spaces)
 }
 
 # print knitr logs

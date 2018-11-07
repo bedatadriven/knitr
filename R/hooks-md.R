@@ -156,7 +156,7 @@ render_markdown = function(strict = FALSE, fence_char = '`') {
         x = gsub(paste0('\n([', fence_char, ']{3,})\n+\\1(', tolower(options$engine), ')?\n'), "\n", x)
       }
       if (is.null(s <- options$indent)) return(x)
-      line_prompt(x, prompt = s, continue = s)
+      evaluate:::line_prompt(x, prompt = s, continue = s)
     }
   )
 }
