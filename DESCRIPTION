@@ -93,80 +93,121 @@ Authors@R: c(
 Maintainer: Yihui Xie <xie@yihui.name>
 Description: Provides a general-purpose tool for dynamic report generation in R
     using Literate Programming techniques.
-Depends:
-    R (>= 3.1.0)
-Imports:
-    evaluate (>= 0.10),
-    highr,
-    markdown,
-    stringr (>= 0.6),
-    yaml,
-    methods,
-    tools
-Suggests:
-    formatR,
-    testit,
-    digest,
-    rgl (>= 0.95.1201),
-    codetools,
-    rmarkdown,
-    htmlwidgets (>= 0.7),
-    webshot,
-    tikzDevice (>= 0.10),
-    tinytex,
-    xfun,
-    reticulate (>= 1.4),
-    JuliaCall (>= 0.11.1),
-    png,
-    jpeg,
-    xml2,
-    httr,
-    DBI (>= 0.4-1),
-    showtext,
-    tibble
+Depends: R (>= 3.1.0)
+Imports: evaluate (>= 0.10), highr, markdown, stringr (>= 0.6), yaml,
+        methods, tools
+Suggests: formatR, testit, digest, rgl (>= 0.95.1201), codetools,
+        rmarkdown, htmlwidgets (>= 0.7), webshot, tikzDevice (>= 0.10),
+        tinytex, xfun, reticulate (>= 1.4), JuliaCall (>= 0.11.1), png,
+        jpeg, xml2, httr, DBI (>= 0.4-1), showtext, tibble
 License: GPL
 URL: https://yihui.name/knitr/
 BugReports: https://github.com/yihui/knitr/issues
 Encoding: UTF-8
 VignetteBuilder: knitr
-SystemRequirements: Package vignettes based on R Markdown v2 or reStructuredText require Pandoc (http://pandoc.org). 
-    The function rst2pdf() require rst2pdf (https://github.com/rst2pdf/rst2pdf).
-Collate:
-    'block.R'
-    'cache.R'
-    'utils.R'
-    'citation.R'
-    'hooks-html.R'
-    'plot.R'
-    'defaults.R'
-    'concordance.R'
-    'engine.R'
-    'highlight.R'
-    'themes.R'
-    'header.R'
-    'hooks-asciidoc.R'
-    'hooks-chunk.R'
-    'hooks-extra.R'
-    'hooks-latex.R'
-    'hooks-md.R'
-    'hooks-rst.R'
-    'hooks-textile.R'
-    'hooks.R'
-    'output.R'
-    'package.R'
-    'pandoc.R'
-    'params.R'
-    'parser.R'
-    'pattern.R'
-    'rocco.R'
-    'spin.R'
-    'table.R'
-    'template.R'
-    'utils-base64.R'
-    'utils-conversion.R'
-    'utils-rd2html.R'
-    'utils-sweave.R'
-    'utils-upload.R'
-    'utils-vignettes.R'
-    'zzz.R'
+SystemRequirements: Package vignettes based on R Markdown v2 or
+        reStructuredText require Pandoc (http://pandoc.org). The
+        function rst2pdf() require rst2pdf
+        (https://github.com/rst2pdf/rst2pdf).
+Collate: 'block.R' 'cache.R' 'utils.R' 'citation.R' 'hooks-html.R'
+        'plot.R' 'defaults.R' 'concordance.R' 'engine.R' 'highlight.R'
+        'themes.R' 'header.R' 'hooks-asciidoc.R' 'hooks-chunk.R'
+        'hooks-extra.R' 'hooks-latex.R' 'hooks-md.R' 'hooks-rst.R'
+        'hooks-textile.R' 'hooks.R' 'output.R' 'package.R' 'pandoc.R'
+        'params.R' 'parser.R' 'pattern.R' 'rocco.R' 'spin.R' 'table.R'
+        'template.R' 'utils-base64.R' 'utils-conversion.R'
+        'utils-rd2html.R' 'utils-sweave.R' 'utils-upload.R'
+        'utils-vignettes.R' 'zzz.R'
 RoxygenNote: 6.0.1
+NeedsCompilation: no
+Packaged: 2018-02-19 20:23:59 UTC; yihui
+Author: Yihui Xie [aut, cre] (<https://orcid.org/0000-0003-0645-5666>),
+  Adam Vogt [ctb],
+  Alastair Andrew [ctb],
+  Alex Zvoleff [ctb],
+  Andre Simon [ctb] (the CSS files under inst/themes/ were derived from
+    the Highlight package http://www.andre-simon.de),
+  Aron Atkins [ctb],
+  Aaron Wolen [ctb],
+  Ashley Manton [ctb],
+  Ben Baumer [ctb],
+  Brian Diggs [ctb],
+  Cassio Pereira [ctb],
+  Christophe Dervieux [ctb],
+  David Hugh-Jones [ctb],
+  David Robinson [ctb],
+  Donald Arseneau [ctb, cph] (the framed package at inst/misc/framed.sty),
+  Doug Hemken [ctb],
+  Duncan Murdoch [ctb],
+  Elio Campitelli [ctb],
+  Fabian Hirschmann [ctb],
+  Fitch Simeon [ctb],
+  Forest Fang [ctb],
+  Frank E Harrell Jr [ctb] (the Sweavel package at inst/misc/Sweavel.sty),
+  Garrick Aden-Buie [ctb],
+  Gregoire Detrez [ctb],
+  Hadley Wickham [ctb],
+  Heewon Jeon [ctb],
+  Henrik Bengtsson [ctb],
+  Hiroaki Yutani [ctb],
+  Ian Lyttle [ctb],
+  Hodges Daniel [ctb],
+  Jake Burkhead [ctb],
+  James Manton [ctb],
+  Jared Lander [ctb],
+  Jason Punyon [ctb],
+  Javier Luraschi [ctb],
+  Jeff Arnold [ctb],
+  Jenny Bryan [ctb],
+  Jeremy Ashkenas [ctb, cph] (the CSS file at
+    inst/misc/docco-classic.css),
+  Jeremy Stephens [ctb],
+  Jim Hester [ctb],
+  Joe Cheng [ctb],
+  Johannes Ranke [ctb],
+  John Honaker [ctb],
+  John Muschelli [ctb],
+  Jonathan Keane [ctb],
+  JJ Allaire [ctb],
+  Johan Toloe [ctb],
+  Jonathan Sidi [ctb],
+  Joseph Larmarange [ctb],
+  Julien Barnier [ctb],
+  Kaiyin Zhong [ctb],
+  Kamil Slowikowski [ctb],
+  Karl Forner [ctb],
+  Kevin K. Smith [ctb],
+  Kirill Mueller [ctb],
+  Kohske Takahashi [ctb],
+  Martin Modrák [ctb],
+  Michael Chirico [ctb],
+  Michael Friendly [ctb],
+  Michal Bojanowski [ctb],
+  Michel Kuhlmann [ctb],
+  Nacho Caballero [ctb],
+  Nick Salkowski [ctb],
+  Noam Ross [ctb],
+  Obada Mahdi [ctb],
+  Qiang Li [ctb],
+  Ramnath Vaidyanathan [ctb],
+  Richard Cotton [ctb],
+  Robert Krzyzanowski [ctb],
+  Romain Francois [ctb],
+  Ruaridh Williamson [ctb],
+  Scott Kostyshak [ctb],
+  Sebastian Meyer [ctb],
+  Sietse Brouwer [ctb],
+  Simon de Bernard [ctb],
+  Sylvain Rousseau [ctb],
+  Taiyun Wei [ctb],
+  Thibaut Assus [ctb],
+  Thibaut Lamadon [ctb],
+  Thomas Leeper [ctb],
+  Tom Torsney-Weir [ctb],
+  Trevor Davis [ctb],
+  Viktoras Veitas [ctb],
+  Weicheng Zhu [ctb],
+  Wush Wu [ctb],
+  Zachary Foster [ctb]
+Repository: CRAN
+Date/Publication: 2018-02-20 10:11:46 UTC
